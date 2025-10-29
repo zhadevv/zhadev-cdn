@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/cdn/(.*)",
+      "dest": "/cdn/$1"
+    },
+    {
+      "src": "/assets/(.*)",
+      "dest": "/src/web/$1"
+    },
+    {
+      "src": "/files/(.*)",
+      "dest": "/api/files/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.js"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  }
+}
