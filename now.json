@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "name": "cdn-zhadev",
+  "builds": [
+    { "src": "**/*.js", "use": "@vercel/node" },
+    { "src": "src/web/**", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/index.js" }
+  ]
+}
