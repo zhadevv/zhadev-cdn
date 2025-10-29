@@ -50,6 +50,8 @@ class CDNServer {
 
   async serveHomePage(req, res) {
     try {
+      const viewsPath = path.join(__dirname, 'web', 'views.ejs');
+      
       res.render('views', { 
         domain: settings.domain,
         maxFileSize: settings.maxFileSize 
