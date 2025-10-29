@@ -4,6 +4,10 @@
     {
       "src": "index.js",
       "use": "@vercel/node"
+    },
+    {
+      "src": "src/web/**",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
@@ -14,6 +18,10 @@
     {
       "src": "/assets/(.*)",
       "dest": "/src/web/$1"
+    },
+    {
+      "src": "/favicon.png", 
+      "dest": "/src/web/favicon.png"
     },
     {
       "src": "/files/(.*)",
