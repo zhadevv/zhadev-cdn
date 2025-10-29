@@ -52,7 +52,7 @@ class CDNServer {
     try {
       const viewsPath = path.join(__dirname, 'web', 'views.ejs');
       
-      res.render('views', { 
+      res.render('views.ejs', { 
         domain: settings.domain,
         maxFileSize: settings.maxFileSize 
       });
